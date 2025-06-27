@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Lalitpur Bags</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Your Profile</h2>
+
+    <div class="card mb-4">
+      <div class="card-header">Repair History</div>
+      <ul class="list-group list-group-flush" id="repairHistory">
+        <!-- Repair history items will be dynamically inserted here -->
+      </ul>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-header">Order History</div>
+      <ul class="list-group list-group-flush" id="orderHistory">
+        <!-- Order history items will be dynamically inserted here -->
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Simulate user session and fetch from PHP endpoint
+    fetch('php/get-profile.php')
+      .then(response => response.json())
+      .then(data => {
+        const repairList = document.getElementById('repairHistory');
+        const orderList = document.getElementById('orderHistory');
+
+        data.repairs.forEach(item => {
+          const li = document.createElement('li');
+          li.className = 'list-group-item';
+          li.innerHTML = `<strong>${item.bag_type}</strong> - ${item.issue_type}, Date: ${item.calendar_date}, Location: ${item.location}`;
+          repairList.appendChild(li);
+        });
+
+        data.orders.forEach(order => {
+          const li = document.createElement('li');
+          li.className = 'list-group-item';
+          li.textContent = `${order.item} x${order.quantity} - Rs. ${order.total_price}`;
+          orderList.appendChild(li);
+        });
+      })
+      .catch(err => {
+        console.error('Error fetching profile data:', err);
+      });
+  </script>
+</body>
+</html>
+
