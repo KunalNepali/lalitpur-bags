@@ -1,0 +1,18 @@
+<style>
+  #storeCarousel {
+    max-width: 100vw; /* full viewport width */
+    max-height: 500px; /* adjust height as needed */
+  }
+
+  #storeCarousel .carousel-inner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+</style>
+.carousel-inner img {
+  width: 100%;
+  height: 500px; /* or any height you want */
+  object-fit: cover;
+}
+
