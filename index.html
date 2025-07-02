@@ -29,17 +29,18 @@
         <li class="nav-item"><a class="nav-link" href="arrivals.html">New Arrivals</a></li>
         <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="moreMenu" role="button" data-bs-toggle="dropdown">
-            ☰
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="index.html">Home</a></li>
-            <li><a class="dropdown-item" href="about_us.html">About Us</a></li>
-            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
-            <li><a class="dropdown-item" href="cart.html">Cart</a></li>
-            <li><a class="dropdown-item" href="cost.html">Cost</a></li>
-          </ul>
-        </li>
+  <a class="nav-link dropdown-toggle" href="#" id="moreMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    ☰
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreMenu">
+    <li><a class="dropdown-item" href="index.html">Home</a></li>
+    <li><a class="dropdown-item" href="about_us.html">About Us</a></li>
+    <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+    <li><a class="dropdown-item" href="cart.html">Cart</a></li>
+    <li><a class="dropdown-item" href="cost.html">Cost</a></li>
+  </ul>
+</li>
+
       </ul>
     </div>
   </div>
@@ -144,13 +145,21 @@
       </div>
     </div>
   </div>
-
+<div class="col-mt-10" position="relative" style="margin:0" padding="0">
+  <p>
+  Note: We repair all types of issues. So, if your bag has problems other than this, feel free to contact us.
+</p>
+</div>
   <!-- Footer -->
   <footer class="bg-dark text-light mt-5 p-4">
     <div class="container">
       <p>📞 +977 9860357158 | +977 9841821074</p>
       <p>📧 Email: kunalnepali123456@gmail.com</p>
-      <p>🔐 <a href="privacy-policy.html" class="text-light">Privacy Policy</a> | <a href="terms.html" class="text-light">Terms and Conditions</a> | <a href="feedback.html" class="text-light">Feedback</a></p>
+      <p>🔐 
+  <a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a> |
+  <a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a> |
+  <a href="#" class="text-light" data-bs-toggle="modal" data-bs-target="#feedbackModal">Feedback</a>
+</p>
       <p>💳 Payment Partners: eSewa, Khalti</p>
       <p>📱 Follow us: <a href="#" class="text-light">Facebook</a> | <a href="#" class="text-light">Instagram</a></p>
     </div>
